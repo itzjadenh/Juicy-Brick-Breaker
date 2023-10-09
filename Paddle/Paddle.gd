@@ -22,7 +22,8 @@ func _input(event):
 		target.x += event.relative.x
 
 func hit(_ball):
-	pass
+	$Confetti.emitting =  true
+
 
 func powerup(payload):
 	for c in $Powerups.get_children():
