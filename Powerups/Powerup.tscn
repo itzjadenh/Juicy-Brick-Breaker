@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://bnhjgrwkyui25"]
+[gd_scene load_steps=4 format=3 uid="uid://bnhjgrwkyui25"]
 
 [ext_resource type="Script" path="res://Powerups/Powerup.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://c574asxyrxown" path="res://Assets/BREAKOUT/HOLE.png" id="2_ph0un"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(30, 30)
@@ -16,5 +17,8 @@ offset_bottom = 15.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_ph0un")
 
 [connection signal="body_entered" from="." to="." method="_on_Powerup_body_entered"]
