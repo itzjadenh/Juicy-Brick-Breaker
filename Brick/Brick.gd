@@ -45,6 +45,8 @@ func hit(_ball):
 	die()
 
 func die():
+	var brick_sound = get_node("/root/Game/Brick_Sound")
+	brick_sound.play()
 	dying = true
 	$CollisionShape2D.queue_free()
 	collision_layer = 0
